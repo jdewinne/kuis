@@ -2,10 +2,17 @@
   "name": "kuis",
   "version": "1.0.0",
   "description": "",
-  "main": "./dist/electron.js",
+  "main": "./app/dist/electron.js",
+  "build": {
+    "appId": "kuis",
+    "files": [
+      "./package.json",
+      "app/dist/**/*"
+    ]
+  },
   "scripts": {
     "build": "webpack --config ./webpack.config.js",
-    "start": "yarn run build && electron ./dist/electron.js",
+    "start": "yarn run build && electron ./app/dist/electron.js",
     "postinstall": "electron-builder install-app-deps",
     "release": "electron-builder --mac --windows --linux --publish always"
   },
@@ -27,6 +34,7 @@
     "webpack-cli": "^3.3.11"
   },
   "dependencies": {
-    "@kubernetes/client-node": "^0.11.1"
+    "@kubernetes/client-node": "^0.11.1",
+    "asar": "^3.0.3"
   }
 }
