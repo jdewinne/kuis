@@ -1,6 +1,7 @@
 module.exports = {
   env: {
     browser: true,
+    "jest/globals": true,
     node: true,
   },
   extends: [
@@ -20,6 +21,7 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: [
+    'jest',
     'react',
     '@typescript-eslint',
   ],
