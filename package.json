@@ -17,7 +17,7 @@
     "release": "electron-builder --mac --windows --linux --publish always",
     "eslint": "eslint src --ext .js,.jsx,.ts,.tsx",
     "test": "jest",
-    "coverage": "nyc npm run test"
+    "coverage": "nyc --reporter=lcov npm run test"
   },
   "keywords": [],
   "author": "",
