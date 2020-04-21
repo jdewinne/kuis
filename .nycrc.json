@@ -1,0 +1,20 @@
+{
+    "reporter": [
+        "text-summary",
+        "text",
+        "lcov"
+    ],
+    "require": [
+        "ts-node/register",
+        "source-map-support/register"
+    ],
+    "cache": false,
+    "all": true,
+    "extension": [
+        ".js",
+        ".ts"
+    ],
+    "include": [
+        "src/**/*.ts"
+    ]
+}
